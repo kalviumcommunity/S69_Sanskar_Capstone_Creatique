@@ -1,17 +1,13 @@
-import Header from "./components/Header";
-import PostCard from "./components/PostCard";
-import UploadForm from "./components/UploadForm";
+import React from 'react';
+import Messages from './components/Messages';
 
-function App() {
+const App = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex justify-center items-start p-6">
-      <div className="w-full max-w-md space-y-6">
-        <Header />
-        <UploadForm />
-        <PostCard caption="This is a sample aesthetic post ✨" />
-      </div>
+    <div>
+      <h1>Welcome to the Frontend!</h1>
+      <Messages />
     </div>
   );
-}
+};
 
 export default App;
