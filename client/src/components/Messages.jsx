@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const Messages = () => {
   const [messages, setMessages] = useState([]);
 
-  // Fetch messages from the backend API
   useEffect(() => {
-    fetch('http://localhost:3000/api/messages')
-      .then(response => response.json())
-      .then(data => setMessages(data))
-      .catch(error => console.error('Error fetching messages:', error));
+    fetch("http://localhost:3000/api/messages")
+      .then((res) => res.json())
+      .then((data) => setMessages(data))
+      .catch((err) => console.error("Error fetching messages:", err));
   }, []);
 
   return (
