@@ -4,13 +4,12 @@ import UploadForm from "./components/UploadForm";
 
 function App() {
   return (
-    <div className="p-4 max-w-md mx-auto">
-      <Header />
-      <UploadForm />
-      <PostCard
-        caption="This is a sample aesthetic post ✨"
-        image="https://source.unsplash.com/random/300x200"
-      />
+    <div className="min-h-screen bg-gray-100 flex justify-center items-start p-6">
+      <div className="w-full max-w-md space-y-6">
+        <Header />
+        <UploadForm />
+        <PostCard caption="This is a sample aesthetic post ✨" />
+      </div>
     </div>
   );
 }
