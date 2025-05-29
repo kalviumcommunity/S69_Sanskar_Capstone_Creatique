@@ -1,22 +1,30 @@
-import express from "express";
-import cors from "cors";
+import express from 'express';
+import cors from 'cors';
 
 const app = express();
-const PORT = 3000;
+const PORT = 5050;
 
-app.use(cors());
-app.use(express.json());
+// Middleware
+app.use(cors()); // Allow cross-origin requests
+app.use(express.json()); // Parse JSON bodies
 
-// Dummy data to send from the backend
-const messages = [
-  { id: 1, text: "Hello from backend!" },
-  { id: 2, text: "You made your first GET API!" },
-];
+// Routes
+app.post('/posts', (req, res) => {
+  const { title, content, image } = req.body;
 
-app.get("/api/messages", (req, res) => {
-  res.json(messages); // Send the messages as JSON response
+  if (!title || !content || !image) {
+    return res.status(400).json({ error: 'All fields are required' });
+  }
+
+  console.log('Received post:', { title, content, image });
+
+  res.status(201).json({
+    message: 'Post received',
+    post: { title, content, image },
+  });
 });
 
+// Start server
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`✅ Server running on http://localhost:${PORT}`);
 });
