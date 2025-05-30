@@ -1,10 +1,11 @@
 import React from 'react';
+import UploadForm from './components/UploadForm';
 import Messages from './components/Messages';
 
 const App = () => {
   return (
-    <div>
-      <h1>Welcome to the Frontend!</h1>
+    <div className="App">
+      <UploadForm />
       <Messages />
     </div>
   );
