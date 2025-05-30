@@ -20,7 +20,7 @@ export default function UploadForm({ postToEdit, onUploadComplete }) {
 
     const method = isEdit ? 'PUT' : 'POST';
     const url = isEdit
-      ? `http://localhost:5050/posts/${postToEdit._id}`
+      ? `http://localhost:5050/posts/${postToEdit.id}`  // <-- make sure this matches backend
       : 'http://localhost:5050/posts';
 
     try {
@@ -39,7 +39,6 @@ export default function UploadForm({ postToEdit, onUploadComplete }) {
       const data = await res.json();
       alert(`✅ Post ${isEdit ? 'updated' : 'created'}:\n` + JSON.stringify(data.post, null, 2));
 
-      // Clear the form (only for create mode)
       if (!isEdit) {
         setTitle('');
         setContent('');
