@@ -3,6 +3,7 @@
 Here's a structured response for your capstone project submission that you can copy-paste into your Google Doc:
 
 Capstone Project Proposal
+
 1️⃣ Idea Brief
 Project Name: Creatique
 Overview:
