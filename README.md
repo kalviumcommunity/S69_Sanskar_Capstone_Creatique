@@ -77,3 +77,11 @@ Day 28
 Submit & present the project.
 
 
+
+## Backend Deployment
+
+The backend server is deployed and accessible at:
+
+[https://s69-sanskar-capstone-creatique-4.onrender.com](https://s69-sanskar-capstone-creatique-4.onrender.com)
+
+You can test the APIs by visiting the URL or using Postman/curl.
